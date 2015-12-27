@@ -52,7 +52,7 @@ Notice the download utility requires wget. You can download wget via homebrew (b
 cd bin
 ./download allCountries.zip
 ```
-The download utility will save the file into the dumps directory. This is the place to move the file you evantually downloaded from your Internet browser.
+The download utility will save the file into the dumps directory. This is the place to move the file you eventually downloaded from your Internet browser.
 
 Call the utility to <b>inflate the zip archive</b> into the dumps directory
 ```
