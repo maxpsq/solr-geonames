@@ -1,0 +1,24 @@
+#!/bin/bash
+
+file=$1
+
+core='geonames'
+
+separator='separator=%09'
+encapsulator='&encapsulator=%00' # %00 disables encapsulation. Default is '"'
+
+header='&header=false'
+
+fieldnames='&fieldnames='
+fieldnames="${fieldnames}id,name,ascii_name,alternate_names,latitude,longitude"
+fieldnames="${fieldnames},feature_class,feature_code,country_code"
+fieldnames="${fieldnames},cc2,admin1,admin2,admin3,admin4"
+fieldnames="${fieldnames},population,elevation,dem,timezone"
+#fieldnames="${fieldnames},date_modified"
+
+multivalued="&f.alternate_names.split=true&f.alternate_names.separator=%2C" # comma (,)
+multivalued="$multivalued&f.cc2.split=true&f.cc2.separator=%2C" # comma (,)
+
+params="${separator}${encapsulator}${header}${fieldnames}${multivalued}"
+
+post -c "$core" -params "$params" -type 'text/csv' "$file"

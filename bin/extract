@@ -1,0 +1,9 @@
+#!/bin/bash
+
+arch=$1
+
+out=`echo $arch | sed 's#\.zip$#.tsv#'`
+
+# Inflating geoname file and removing the last column (modification date).
+# cut from the 1st to the 18th field (tab is the default separator)
+unzip -p "$arch" | cut -f1-18 > "$out"
