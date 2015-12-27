@@ -20,47 +20,47 @@ We're going to create a standalone core based on the basic_config template
 ```
 solr create -c geonames -d $SOLR_HOME/server/solr/configsets/basic_configs
 ```
-You can get further information by the 'help' option
+You can get further information about creating cores or collections by the 'help' option
 ```
 solr create -h
 ```
 ### Deploy the Geonames schema.xml 
 
-This mini-project comes with a schema.xml file that represent a Geonames' place document.
+This mini-project comes with a schema.xml file that represents a Geonames' place document.
 ```
 cp ./solr/geonames/conf/schema.xml  $SOLR_HOME/server/solr/geonames/conf/
 ```
 
 ### Restart Solr
 
-In order to load the new schema.xml file we ned to restart Solr. This may be done in two steps
+In order to apply the changes made to the new schema.xml file we need to restart Solr. This may be done in two steps
 ```
-solr stop ; solr start
+solr stop && solr start
 ```
 or just in a single step
 ```
 solr restart
 ```
-If everything is ok, you should see no error messages in Solr's admin console [http://localhost:8983/solr/#/]
+If everything is ok, you should see no error messages in Solr's [admin console] http://localhost:8983/solr/#/
 
 ### Download and post Geonames' palces to Solr
 
-Change directory to bin and download the file you want. You may choose among allCountries.zip or just a subset of wolrd places by country by population (see Geonames download page). 
+Change directory to bin and <b>download the file you want</b>. You may choose among allCountries.zip or just a subset of wolrd places by country or by population (see Geonames download page). 
 
-Notice the download utility requires wget. You can download wget via homebrew (brew install wget) or simply download the gazeteer file from your favourite Internet browser here http://download.geonames.org/export/dump/
+Notice the download utility requires wget. You can download wget via homebrew (brew install wget) or simply download the archive file using your favourite Internet browser here http://download.geonames.org/export/dump/
 ```
 cd bin
 ./download allCountries.zip
 ```
 The download utility will save the file into the dumps directory. This is the place to put the file you evantually download from your Internet browser.
 
-Inflate the zip archive
+<b>Inflate the zip archive</b>
 ```
 ./extract ../dumps/allCountries.zip
 ```
 this will create a Tab Separated values file (tsv) in the same directory where the zip file was saved. Notice I decided to remove the 'modification date' field simply because it was useless to me.
 
-Finally it's time for Solr to ingest Geonames' data. Ready? Just type:
+Finally it's time for Solr to <b>ingest Geonames' data</b>. Ready? Just type:
 ```
 ./ingest ../dumps/allCountries.tsv
 ```
