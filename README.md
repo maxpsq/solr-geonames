@@ -54,7 +54,7 @@ cd bin
 ```
 The download utility will save the file into the dumps directory. This is the place to put the file you evantually download from your Internet browser.
 
-<b>Inflate the zip archive</b>
+Call the utility to <b>inflate the zip archive</b> into the dumps directory
 ```
 ./extract ../dumps/allCountries.zip
 ```
