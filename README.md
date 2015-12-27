@@ -7,7 +7,7 @@ On Mac OS X via Homebrew
 ```
 brew install solr 5.4
 ```
-Or simply download and unpack Solr from http://lucene.apache.org/solr/mirrors-solr-latest-redir.html
+Or simply download and unpack Solr from the [download page](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html). You'll be redirected to the best mirror.
 
 ### Run Solr 5
 ```
@@ -41,13 +41,13 @@ or just in a single step
 ```
 solr restart
 ```
-If everything is ok, you should see no error messages in Solr's [admin console] http://localhost:8983/solr/#/
+If everything is ok, you should see no error messages in Solr's [admin console] (http://localhost:8983/solr/#/)
 
 ### Download and post Geonames' palces to Solr
 
 Change directory to bin and <b>download the file you want</b>. You may choose among allCountries.zip or just a subset of wolrd places by country or by population (see Geonames download page). 
 
-Notice the download utility requires wget. You can download wget via homebrew (brew install wget) or simply download the archive file using your favourite Internet browser here http://download.geonames.org/export/dump/
+Notice the download utility requires wget. You can download wget via homebrew (brew install wget) or simply download the archive file using your favourite Internet browser from [Geonames download page](http://download.geonames.org/export/dump/)
 ```
 cd bin
 ./download allCountries.zip
@@ -66,3 +66,4 @@ Finally it's time for Solr to <b>ingest Geonames' data</b>. Ready? Just type:
 ```
 Now sit down, relax and wait for Solr to finish the huge meal.
 
+Happy searching!
