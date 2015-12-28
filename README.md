@@ -41,7 +41,7 @@ or just in a single step
 ```
 solr restart
 ```
-If everything is ok, you should see no error messages in Solr's [admin console] (http://localhost:8983/solr/#/)
+If everything is ok, you will see no error messages in Solr's [admin console] (http://localhost:8983/solr/#/)
 
 ### Download and post Geonames palces to Solr
 
