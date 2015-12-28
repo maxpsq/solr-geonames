@@ -1,6 +1,7 @@
 #!/bin/bash
 
-url='http://download.geonames.org/export/dump/allCountries.zip'
+file=$1
 
-wget -O ../dumps/allCountries.zip "$url"
+url="http://download.geonames.org/export/dump/$file"
 
+wget -O "../dumps/$file" "$url"
