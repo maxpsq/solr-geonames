@@ -45,7 +45,7 @@ If everything is ok, you will see no error messages in Solr's [admin console] (h
 
 ### Download and post Geonames palces to Solr
 
-Change directory to bin and <b>download the file you want</b>. You may choose among allCountries.zip or just a subset of wolrd places by country or by population (see Geonames download page). 
+Change directory to bin and <b>download the file you want</b>. You may choose among allCountries.zip or just a subset of world places by country or by population (see Geonames download page). 
 
 Notice the download utility requires wget. You can download wget via homebrew (brew install wget) or simply download the archive file using your favourite Internet browser from [Geonames' download page](http://download.geonames.org/export/dump/)
 ```
