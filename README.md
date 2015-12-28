@@ -7,7 +7,7 @@ On Mac OS X via Homebrew
 ```
 brew install solr 5.4
 ```
-or simply download and unpack Solr from the [download page](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html). You'll be redirected to the best mirror.
+or simply download and unpack Solr from the [download page](http://lucene.apache.org/solr/mirrors-solr-latest-redir.html). You'll be redirected to the best mirror site.
 
 ### Run Solr 5
 ```
