@@ -306,7 +306,7 @@ BEGIN {
 		else continent = country2continent($9);
 	hLev = hierarcyLevel($8, $1);
 	hierarchy = hierarchyPath(hLev, continent, $9, $11, $12, $13, $14);
-	if ( hLev == -1 ) ancestorID = ""; else node = hLev "." hierarchy ;
+	if ( hLev == -1 ) ancestorID = ""; else ancestorID = hLev "." hierarchy ;
 	split("", ancestors, ",");  # empy array
 	allAncestors(hierarchy, ancestors);
 
