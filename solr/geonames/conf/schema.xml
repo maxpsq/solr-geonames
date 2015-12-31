@@ -535,25 +535,27 @@
      in a compatible way. Any analysis applied to the <uniqueKey> should _not_ produce multiple
      tokens
    -->   
-      <field name="id"            type="string" indexed="true" stored="true" required="true" multiValued="false"/>
-      <field name="name"          type="text_ws_lower"   indexed="true" stored="true" />
-      <field name="ascii_name"    type="text_ws_lower"   indexed="true" stored="true" required="false" omitNorms="false" />
-      <field name="alternate_names" type="text_ws_lower" indexed="true" stored="true" multiValued="true" />
-      <field name="latitude"      type="tfloat" indexed="true" stored="true" />
-      <field name="longitude"     type="tfloat" indexed="true" stored="true" />
-      <field name="feature_class" type="string" indexed="true" stored="true" />
-      <field name="feature_code"  type="string" indexed="true" stored="true" />
-      <field name="country_code"  type="string" indexed="true" stored="true" />
-      <field name="cc2"           type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="admin1"        type="string" indexed="true" stored="true" />
-      <field name="admin2"        type="string" indexed="true" stored="true" />
-      <field name="admin3"        type="string" indexed="true" stored="true" />
-      <field name="admin4"        type="string" indexed="true" stored="true" />
-      <field name="population"    type="tlong"  indexed="true" stored="true" />
-      <field name="elevation"     type="tint"   indexed="true" stored="true" />
-      <field name="dem"           type="tint"   indexed="true" stored="true" />
-      <field name="timezone"      type="string" indexed="true" stored="true" />
-<!--      <field name="date_modified" type="tdate"   indexed="true" stored="true" /> -->
+      <field name="geonameId"      type="string" indexed="true" stored="true" required="true" multiValued="false"/>
+      <field name="name"           type="text_ws_lower"   indexed="true" stored="true" />
+      <field name="asciiName"      type="text_ws_lower"   indexed="true" stored="true" required="false" omitNorms="false" />
+      <field name="alternateNames" type="text_ws_lower" indexed="true" stored="true" multiValued="true" />
+      <field name="lat"            type="tfloat" indexed="true" stored="true" />
+      <field name="lng"            type="tfloat" indexed="true" stored="true" />
+      <field name="fcl"            type="string" indexed="true" stored="true" />
+      <field name="fcode"          type="string" indexed="true" stored="true" />
+      <field name="countryCode"    type="string" indexed="true" stored="true" />
+      <field name="cc2"            type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="adm1"           type="string" indexed="true" stored="true" />
+      <field name="adm2"           type="string" indexed="true" stored="true" />
+      <field name="adm3"           type="string" indexed="true" stored="true" />
+      <field name="adm4"           type="string" indexed="true" stored="true" />
+      <field name="population"     type="tlong"  indexed="true" stored="true" />
+      <field name="elevation"      type="tint"   indexed="true" stored="true" />
+      <field name="dem"            type="tint"   indexed="true" stored="true" />
+      <field name="timezone"       type="string" indexed="true" stored="true" />
+<!--  <field name="dateModified"   type="tdate"  indexed="true" stored="true" /> -->
+      <field name="ancestors"      type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="hcode"          type="string" indexed="true" stored="true" />
 
    <!-- If you remove this field, you must _also_ disable the update log in solrconfig.xml
       or Solr won't start. _version_ and update log are required for SolrCloud
@@ -563,6 +565,6 @@
    <!-- Field to use to determine and enforce document uniqueness. 
       Unless this field is marked with required="false", it will be a required field
    -->
-   <uniqueKey>id</uniqueKey>
+   <uniqueKey>geonameId</uniqueKey>
 
 </schema>
