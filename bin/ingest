@@ -10,7 +10,7 @@ encapsulator='&encapsulator=%00' # %00 disables encapsulation. Default is '"'
 header='&header=false'
 
 fieldnames='&fieldnames='
-fieldnames="${fieldnames}geonameId,name,asciiName,alternateNames,lat,lng"
+fieldnames="${fieldnames}id,name,asciiName,alternateNames,lat,lng"
 fieldnames="${fieldnames},fcl,fcode,countryCode"
 fieldnames="${fieldnames},cc2,adm1,adm2,adm3,adm4"
 fieldnames="${fieldnames},population,elevation,dem,timezone"

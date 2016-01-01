@@ -307,7 +307,7 @@ BEGIN {
 	hLev = hierarcyLevel($8, $1);
 	hierarchy = hierarchyPath(hLev, continent, $9, $11, $12, $13, $14);
 	if ( hLev == -1 ) ancestorID = ""; else ancestorID = hLev "." hierarchy ;
-	split("", ancestors, ",");  # empy array
+	split("", ancestors, ",");  # empty array
 	allAncestors(hierarchy, ancestors);
 
 	# a place classified as a "ancestor" cannot be an ancestor of itself.
